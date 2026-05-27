@@ -11,9 +11,9 @@ class student
     void display()
     {
         cout<<name<<":"<<marks<<endl;
-
     }
 };
+
 int main()
 {
     student batch1[3]={
