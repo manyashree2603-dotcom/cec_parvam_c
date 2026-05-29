@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+    private:
+    string name;
+    int age;
+    double cgpa;
+
+    public:
+    string getName() const { return name: }
+    int getAge() const { return age; }
+    double getCgpa() const { return cgpa; }
+
+    void setName(const string& n) { name = n; }
+
+    void setAge(int a) {
+        if(a > 0 && a < 150) {
+            age = a;
+        } else {
+            cout << "Invalid age!" << endl;
+        }
+    }
+
+    void setCgpa(double c) {
+        if(c >= 0.0 && c <= 10.0) {
+            cgpa = c;
+        } else {
+            cout << "Invalid CGPA! Must be between 0.0 and 10.0" << endl;
+        }
+    }
+};
+
+int main() {
+    Student s1;
+
+    s1.setName("Manya");
+    s1.setAge(19);
+    s1.setCgpa(8.7);
+
+    s1.display();
+    
+    return 0;
+}
